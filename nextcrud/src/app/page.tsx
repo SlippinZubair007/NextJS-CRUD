@@ -2,6 +2,10 @@
 import { useRouter } from "next/navigation";
 import { isLoggedIn, logoutUser } from "@/utils/auth";
 import { useEffect } from "react";
+import Para from "@/components/Para"
+import Heading from "@/components/Heading"
+
+
 
 export default function HomePage() {
   const router = useRouter();
@@ -19,16 +23,16 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex flex-col items-center justify-center text-white px-6 text-center">
-      <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-wide">
+      <Heading >
         Welcome to Your Dashboard 🚀
-      </h1>
+      </Heading>
 
-      <p className="max-w-xl text-lg md:text-xl opacity-80 leading-relaxed mb-8">
+      <Para>
         This is your personal space in the app. From here, you can explore all
         the amazing features we’ve crafted for you. Our futuristic interface is
         built to inspire productivity, creativity, and focus. Sit back, relax,
         and enjoy the journey. 🌌
-      </p>
+      </Para>
 
       <button
         onClick={handleLogout}
