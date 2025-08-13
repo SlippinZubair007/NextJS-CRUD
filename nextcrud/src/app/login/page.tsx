@@ -1,7 +1,18 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { loginUser } from "@/utils/auth";
+import { loginUser } from "@/auth/auth";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -18,8 +29,20 @@ export default function LoginPage() {
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Login</h1>
+
+    <div className="flex flex-col justify-center items-center pb-50">
+      <Card className="w-full max-w-sm">
+        <CardHeader>
+        <CardTitle>Login to your account</CardTitle>
+        <CardDescription>Enter your email below to login to your account</CardDescription>
+        <CardAction>
+          <Link href='/signup'>
+          <Button>Sign Up</Button>
+          </Link>
+        </CardAction>
+         </CardHeader>
+
+    <CardContent>
       <form onSubmit={handleLogin}>
         <input
           type="email"
@@ -37,6 +60,8 @@ export default function LoginPage() {
         /><br /><br />
         <button type="submit">Login</button>
       </form>
+      </CardContent>
+      </Card>
     </div>
   );
 }

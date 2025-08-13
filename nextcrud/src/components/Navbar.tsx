@@ -17,16 +17,8 @@ const Navbar = () => {
       <div className="container mx-auto flex flex-wrap items-center justify-between py-3 px-4">
         {/* Brand / Logo */}
         <Link href="/" className="flex items-center gap-1">
-          <Image
-            src="/flare.png"
-            alt="Flare Prep"
-            width={60}
-            height={60}
-            className="object-contain"
-            priority
-          />
-          <span className="text-xl font-bold text-white">Flare</span>
-          <span className="text-xl font-bold text-white">prep</span>
+          <span className="text-xl font-bold text-white">Next</span>
+          <span className="text-xl font-bold text-white">JS</span>
           <Flame className="w-6 h-6 text-amber-400 animate-pulse" />
         </Link>
 
@@ -36,15 +28,6 @@ const Navbar = () => {
             {[
               { href: "/", label: "Home" },
               { href: "/about", label: "About" },
-              { href: "/FlareKull", label: "Assistance" },
-              { href: "/planner", label: "Pomodoro" },
-              {
-                href: "https://drive.google.com/drive/u/2/folders/1j9SDgreJRAUvoqpEHqiZTMhlPAXZonM4",
-                label: "Resources",
-              },
-              { href: "/reviews", label: "Reviews" },
-              { href: "/timetable", label: "Timetable" },
-              { href: "/test", label: "Exams" },
               { href: "/contact", label: "Contact" },
             ].map(({ href, label }) => (
               <NavigationMenuItem key={href}>

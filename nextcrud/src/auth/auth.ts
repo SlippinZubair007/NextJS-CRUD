@@ -1,4 +1,4 @@
-// src/utils/auth.ts
+
 export function saveUser(email: string, password: string) {
   localStorage.setItem("mockUser", JSON.stringify({ email, password }));
 }

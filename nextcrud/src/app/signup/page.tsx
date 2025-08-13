@@ -1,7 +1,18 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { saveUser } from "@/utils/auth";
+import { saveUser } from "@/auth/auth";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -16,8 +27,18 @@ export default function SignupPage() {
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Sign Up</h1>
+    <div className="flex flex-col justify-center items-center pb-50">
+    <Card className="w-full max-w-sm">
+      <CardHeader>
+        <CardTitle>Sign Up</CardTitle>
+        <CardDescription>Create an account</CardDescription>
+                <CardAction>
+              <Link href='/login'>
+              <Button>Log In</Button>
+              </Link> 
+        </CardAction>
+        </CardHeader>
+        <CardContent>
       <form onSubmit={handleSignup}>
         <input
           type="email"
@@ -35,6 +56,13 @@ export default function SignupPage() {
         /><br /><br />
         <button type="submit">Sign Up</button>
       </form>
+      </CardContent>
+      <CardFooter className="flex-col gap-2">
+        <Button type="submit" className="w-full border">
+          Login
+        </Button>
+      </CardFooter>
+      </Card>
     </div>
   );
 }

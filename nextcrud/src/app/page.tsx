@@ -1,9 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { isLoggedIn, logoutUser } from "@/utils/auth";
+import { isLoggedIn, logoutUser } from "@/auth/auth";
 import { useEffect } from "react";
-import Para from "@/components/Para"
-import Heading from "@/components/Heading"
+import Para from "@/common/Para"
+import Heading from "@/common/Heading"
 
 
 

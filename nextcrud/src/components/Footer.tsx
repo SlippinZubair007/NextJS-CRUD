@@ -17,11 +17,11 @@ const Footer = () => {
                 <Flame className="w-4 h-4 animate-pulse" />
               </div>
               <span className="text-xl font-bold text-white">
-                Flare<span className="text-white">prep</span>
+                Next<span className="text-white">JS</span>
               </span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Flareprep - All rights reserved
+              © {new Date().getFullYear()} NextJS - All rights reserved
             </p>
           </div>
 
