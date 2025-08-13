@@ -13,7 +13,7 @@ import {
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 left-0 w-full z-50">
+    <header className="absolute top-0 left-0 w-full z-20 bg-primary">
       <div className="container mx-auto flex flex-wrap items-center justify-between py-3 px-4">
         {/* Brand / Logo */}
         <Link href="/" className="flex items-center gap-1">

@@ -22,16 +22,16 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black flex flex-col items-center justify-center text-white px-6 text-center">
+    <div className="min-h-screen bg-primary flex flex-col items-center justify-center text-white px-2 top-0 text-center">
       <Heading >
-        Welcome to Your Dashboard 🚀
+        Welcome to Your Dashboard!
       </Heading>
 
       <Para>
         This is your personal space in the app. From here, you can explore all
-        the amazing features we’ve crafted for you. Our futuristic interface is
+        the amazing features we have crafted for you. Our futuristic interface is
         built to inspire productivity, creativity, and focus. Sit back, relax,
-        and enjoy the journey. 🌌
+        and enjoy the journey. 
       </Para>
 
       <button
